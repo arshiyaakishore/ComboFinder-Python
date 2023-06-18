@@ -30,6 +30,15 @@ for i in range(Iterations):
     # Check the Sum Between LB and UB
     if ComboSum>= LB and ComboSum<= UB:
       ResultList.add(tuple(ComboList))
+
+
+#The for loop runs Iterations times, and in each iteration, a combination of products is generated.
+# SetSize is assigned a random value between 2 and the length of ProductList minus
+# 1. This determines the number of products to be selected in a single combination.
+# ComboList is generated using the sample() function from the random module. It randomly selects SetSize number of elements (product codes) from ProductList.keys().
+# The selected elements are then sorted in ascending order.
+# The total sum of prices for the products in ComboList is calculated and assigned to ComboSum using a list comprehension and the sum() function.
+# The if statement checks if ComboSum falls between LB and UB. If it does, the combination ComboList is added to ResultList as a tuple.
       
 # Print all the sets whose sum is between LB and UB
 for r in ResultList:
